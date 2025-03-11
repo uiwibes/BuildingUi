@@ -1,0 +1,178 @@
+/* Custom CSS for SEIFI Properties Website */
+
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    letter-spacing: 0.5px;
+}
+
+/* Header Styles */
+header {
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80');
+    background-size: cover;
+    background-position: center;
+    padding-top: 80px; /* To account for fixed header */
+}
+
+/* About Section */
+.about-image {
+    background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+/* Project Images */
+.project-image:nth-child(1) {
+    background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1475&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-white .project-image:nth-of-type(1) {
+    background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1475&q=80');
+}
+
+.bg-white:nth-of-type(2) .project-image {
+    background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80');
+}
+
+.bg-white:nth-of-type(3) .project-image {
+    background-image: url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+}
+
+/* Image Hover Effects */
+.value-card .h-64,
+.service-card .h-64,
+.area-card .h-64,
+.project-image {
+    transition: all 0.5s ease;
+}
+
+.value-card:hover .h-64,
+.service-card:hover .h-64,
+.area-card:hover .h-64,
+.project-image:hover {
+    transform: scale(1.03);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section h1,
+.hero-section img {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero-section img {
+    animation-delay: 0.3s;
+}
+
+.hero-section h1 {
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-image {
+        height: 300px;
+    }
+    
+    .hero-section {
+        background-position: center right;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}
+
+/* Button Hover Effects */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Form Focus Effects */
+input:focus, textarea:focus {
+    transition: all 0.3s ease;
+}
+
+/* Section Transitions */
+section {
+    transition: background-color 0.5s ease;
+}
+
+/* Image Overlay Effects */
+.value-card .h-64::after,
+.service-card .h-64::after,
+.area-card .h-64::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.value-card:hover .h-64::after,
+.service-card:hover .h-64::after,
+.area-card:hover .h-64::after {
+    opacity: 1;
+}
+
+/* Typography Refinements */
+h2, h3 {
+    letter-spacing: 2px;
+}
+
+.uppercase {
+    letter-spacing: 2px;
+}
+
+/* Container Positioning */
+.value-card, .service-card, .area-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Logo Styling */
+.logo-container img {
+    filter: brightness(0) invert(1);
+} 

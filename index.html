@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEIFI Properties</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'seifi-gray': '#f8f8f8',
+                        'seifi-dark': '#333333',
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-white text-seifi-dark">
+    <!-- Header -->
+    <header class="fixed w-full bg-white z-50 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="logo">
+                <a href="#" class="text-xl font-medium uppercase tracking-wider">SEIFI Properties</a>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-sm uppercase tracking-wider hover:text-gray-500">About Us</a>
+                <a href="#what-we-do" class="text-sm uppercase tracking-wider hover:text-gray-500">What We Do</a>
+                <a href="#areas" class="text-sm uppercase tracking-wider hover:text-gray-500">Areas of Work</a>
+                <a href="#projects" class="text-sm uppercase tracking-wider hover:text-gray-500">Projects</a>
+                <a href="#contact" class="text-sm uppercase tracking-wider hover:text-gray-500">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#about" class="text-sm uppercase tracking-wider">About Us</a>
+                <a href="#what-we-do" class="text-sm uppercase tracking-wider">What We Do</a>
+                <a href="#areas" class="text-sm uppercase tracking-wider">Areas of Work</a>
+                <a href="#projects" class="text-sm uppercase tracking-wider">Projects</a>
+                <a href="#contact" class="text-sm uppercase tracking-wider">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="container mx-auto px-4 z-10 text-center text-white">
+            <div class="logo-container mb-4">
+                <img src="images/placeholder-80.jpg" alt="SEIFI Logo" class="mx-auto">
+            </div>
+            <h1 class="text-3xl md:text-4xl uppercase tracking-widest mb-2 font-light">Creating Landmark Spaces</h1>
+        </div>
+    </section>
+
+    <!-- Logo Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 text-center">
+            <img src="images/placeholder-80.jpg" alt="SEIFI Logo" class="mx-auto mb-8">
+            <p class="max-w-3xl mx-auto text-sm leading-relaxed text-gray-600">
+                Founded in 2010, we are a company dedicated to the creation of timeless, elegant spaces of the highest quality, all of which are informed by a bespoke vision grounded in functionality and sustainability.
+            </p>
+            <a href="#about" class="inline-block mt-8 text-xs uppercase tracking-widest border-b border-gray-400 pb-1 hover:border-gray-900 transition-colors duration-300">More about us</a>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-12 bg-seifi-gray">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Value 1 -->
+                <div class="value-card">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('images/photo-1600585154340-be6161a56a0c.jpg')"></div>
+                    <div class="text-center mt-4">
+                        <h3 class="uppercase text-xs tracking-widest">Excellence</h3>
+                    </div>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="value-card">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('images/photo-1600607687939-ce8a6c25118c.jpg')"></div>
+                    <div class="text-center mt-4">
+                        <h3 class="uppercase text-xs tracking-widest">Integrity</h3>
+                    </div>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="value-card">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                    <div class="text-center mt-4">
+                        <h3 class="uppercase text-xs tracking-widest">Innovative</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section id="what-we-do" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl uppercase tracking-widest font-light">What We Do</h2>
+                <p class="max-w-3xl mx-auto mt-6 text-sm leading-relaxed text-gray-600">
+                    At the forefront of luxury property development, SEIFI delivers unrivalled properties from concept to completion.
+                </p>
+                <a href="#" class="inline-block mt-8 text-xs uppercase tracking-widest border-b border-gray-400 pb-1 hover:border-gray-900 transition-colors duration-300">View What We Do</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80')"></div>
+                    <div class="text-center mt-4">
+                        <h3 class="uppercase text-xs tracking-widest">Development</h3>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                    <div class="text-center mt-4">
+                        <h3 class="uppercase text-xs tracking-widest">Construction</h3>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                    <div class="text-center mt-4">
+                        <h3 class="uppercase text-xs tracking-widest">Property Management</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas of Work Section -->
+    <section id="areas" class="py-20 bg-seifi-gray">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl uppercase tracking-widest font-light">Areas of Work</h2>
+                <p class="max-w-3xl mx-auto mt-6 text-sm leading-relaxed text-gray-600">
+                    Intricate attention to detail, to create landmark spaces across the whole specter of property industry.
+                </p>
+                <a href="#" class="inline-block mt-8 text-xs uppercase tracking-widest border-b border-gray-400 pb-1 hover:border-gray-900 transition-colors duration-300">View Our Areas of Work</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Area 1 -->
+                <div class="area-card">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                    <div class="text-center mt-4">
+                        <h3 class="uppercase text-xs tracking-widest">Boutique Residential</h3>
+                    </div>
+                </div>
+                
+                <!-- Area 2 -->
+                <div class="area-card">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80')"></div>
+                    <div class="text-center mt-4">
+                        <h3 class="uppercase text-xs tracking-widest">Gated Communities</h3>
+                    </div>
+                </div>
+                
+                <!-- Area 3 -->
+                <div class="area-card">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                    <div class="text-center mt-4">
+                        <h3 class="uppercase text-xs tracking-widest">Urban Development</h3>
+                    </div>
+                </div>
+                
+                <!-- Area 4 -->
+                <div class="area-card">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80')"></div>
+                    <div class="text-center mt-4">
+                        <h3 class="uppercase text-xs tracking-widest">Corporate / Retail</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl uppercase tracking-widest font-light">Sample Projects</h2>
+                <p class="max-w-3xl mx-auto mt-6 text-sm leading-relaxed text-gray-600">
+                    With an understanding for the needs of the market, each one of our properties has been designed and build with a certain cliental in-mind, allowing for a wide variety of choice for both the final home owners and investors.
+                </p>
+            </div>
+            
+            <!-- Project 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+                <div class="project-image h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl uppercase tracking-wider font-light mb-4">NO. 5 Elahieh Residence</h3>
+                    <p class="text-sm leading-relaxed text-gray-600 mb-6">
+                        Tucked behind the Residence of the German Ambassador and next to the river, No. 5 Elahieh is a superb private residential complex offering the very best in quality, style, and design.
+                    </p>
+                    <a href="#" class="inline-block text-xs uppercase tracking-widest border-b border-gray-400 pb-1 hover:border-gray-900 transition-colors duration-300 w-max">View Project</a>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+                <div class="order-1 md:order-2 project-image h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1453&q=80')"></div>
+                <div class="order-2 md:order-1 flex flex-col justify-center">
+                    <h3 class="text-xl uppercase tracking-wider font-light mb-4">No.7 Nastaran Residence</h3>
+                    <p class="text-sm leading-relaxed text-gray-600 mb-6">
+                        A collection of 11 Apartments and 2 penthouses of exceptional quality and elegance, in the prime neighborhood of Aghdasiyeh.
+                    </p>
+                    <a href="#" class="inline-block text-xs uppercase tracking-widest border-b border-gray-400 pb-1 hover:border-gray-900 transition-colors duration-300 w-max">View Project</a>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+                <div class="project-image h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl uppercase tracking-wider font-light mb-4">PLQ.18 Koohyar</h3>
+                    <p class="text-sm leading-relaxed text-gray-600 mb-6">
+                        Inspired by the past, with a look to the future, PLQ. 18 Residence is a perfect combination of traditional Persian architecture and design with modern-day facilities.
+                    </p>
+                    <a href="#" class="inline-block text-xs uppercase tracking-widest border-b border-gray-400 pb-1 hover:border-gray-900 transition-colors duration-300 w-max">View Project</a>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="order-1 md:order-2 project-image h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80')"></div>
+                <div class="order-2 md:order-1 flex flex-col justify-center">
+                    <h3 class="text-xl uppercase tracking-wider font-light mb-4">PLQ.23 Parsa</h3>
+                    <p class="text-sm leading-relaxed text-gray-600 mb-6">
+                        Sitting high on the hills of Elahieh in Parsa Avenue and build over 19 floors, featuring 12 apartments, with one apartment per floor and unrivalled communal facilities across the building, No. 23 residence is for the very few discerning clients that appreciate the finest details of luxury living.
+                    </p>
+                    <a href="#" class="inline-block text-xs uppercase tracking-widest border-b border-gray-400 pb-1 hover:border-gray-900 transition-colors duration-300 w-max">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-seifi-gray">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl uppercase tracking-widest font-light">Contact Us</h2>
+                <p class="max-w-3xl mx-auto mt-6 text-sm leading-relaxed text-gray-600">
+                    For further questions, including partnership opportunities, please contact using our contact form.
+                </p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <form>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div>
+                            <input type="text" placeholder="Full Name" class="w-full px-4 py-3 border-b border-gray-300 bg-transparent focus:outline-none focus:border-gray-900">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email" class="w-full px-4 py-3 border-b border-gray-300 bg-transparent focus:outline-none focus:border-gray-900">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 border-b border-gray-300 bg-transparent focus:outline-none focus:border-gray-900">
+                        </div>
+                        <div>
+                            <textarea placeholder="Your Message" rows="5" class="w-full px-4 py-3 border-b border-gray-300 bg-transparent focus:outline-none focus:border-gray-900"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="inline-block px-8 py-3 border border-gray-900 text-xs uppercase tracking-widest hover:bg-gray-900 hover:text-white transition-colors duration-300">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-gray-800 py-8 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-sm uppercase tracking-widest mb-4">SEIFI Properties</h3>
+                    <p class="text-xs text-gray-600 mb-4">
+                        A pioneer in the real estate field since 2010, SEIFI Properties has made a reputation for itself in the luxury real estate sector.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm uppercase tracking-widest mb-4">Useful Links</h3>
+                    <ul class="space-y-2 text-xs text-gray-600">
+                        <li><a href="#" class="hover:text-gray-900 transition duration-300">Home</a></li>
+                        <li><a href="#about" class="hover:text-gray-900 transition duration-300">About</a></li>
+                        <li><a href="#what-we-do" class="hover:text-gray-900 transition duration-300">What We Do</a></li>
+                        <li><a href="#areas" class="hover:text-gray-900 transition duration-300">Areas of Work</a></li>
+                        <li><a href="#projects" class="hover:text-gray-900 transition duration-300">Projects</a></li>
+                        <li><a href="#contact" class="hover:text-gray-900 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm uppercase tracking-widest mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-xs text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>123 Main Street, Suite 100<br>New York, NY 10001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <span>info@seifiproperties.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 mt-8 pt-8 text-center">
+                <p class="text-xs text-gray-600">&copy; 2023 SEIFI Properties. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
